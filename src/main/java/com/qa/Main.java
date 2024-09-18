@@ -18,8 +18,18 @@ public class Main {
 
         System.out.println(megan);
 
-        System.out.println(Character.rollDice());
+        System.out.println(megan.rollDice());
 
+        PlayableCharacter michael = new PlayableCharacter();
+        michael.setExpPoints(13);
+
+        System.out.println(michael.rollDice());
+
+        Character[] characters = {bob, megan, michael};
+
+        for (Character c : characters) {
+            System.out.println(c);
+        }
 
     }
 }
