@@ -2,14 +2,14 @@ package com.qa;
 import java.util.Random;
 
 public class PlayableCharacter extends Character {
-    private int ExpPoints;
+    private int ExperiencePoints;
 
     public int getExpPoints() {
-        return ExpPoints;
+        return ExperiencePoints;
     }
 
     public void setExpPoints(int expPoints) {
-        ExpPoints = expPoints;
+        ExperiencePoints = expPoints;
     }
 
     @Override
