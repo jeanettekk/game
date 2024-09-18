@@ -12,7 +12,7 @@ public abstract class Character {
     private int yPosition;
     private static final Random rand = new Random();
 
-    public static int rollDice() {
+    public int rollDice() {
         return rand.nextInt(1, 13);
     }
 

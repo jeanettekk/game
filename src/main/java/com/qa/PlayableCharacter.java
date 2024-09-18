@@ -1,5 +1,6 @@
 package com.qa;
 
+
 public abstract class PlayableCharacter extends Character{
 
     public String getUserName() {
@@ -38,7 +39,5 @@ public abstract class PlayableCharacter extends Character{
     public abstract void rest(boolean isLong);
 
     private int experiencePoints;
-
-
 
 }

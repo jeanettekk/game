@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println(megan);
 
-        System.out.println(Character.rollDice());
+        System.out.println(megan.rollDice());
 
         Character[] heroes = {megan, johnny, lisa};
 
@@ -42,10 +42,6 @@ public class Main {
                 flyer.fall((Character) flyer);
             }
         }
-
-
-
-
 
 
 
