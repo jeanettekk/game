@@ -1,7 +1,7 @@
 package com.qa;
 import java.util.Random;
 
-public class Character {
+public abstract class Character {
     private String name;
     private int health;
     private int level;
@@ -85,6 +85,10 @@ public class Character {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
     }
+
+    public abstract void doDamage(Character target);
+
+
 
     @Override
     public String toString() {

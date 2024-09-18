@@ -1,24 +1,52 @@
 package com.qa;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
-        Character bob = new Character();
-        bob.setHealth(10);
-        bob.setPosition(4, 22);
+        Healer megan = new Healer("Megan", "The Seven");
+        Caster johnny = new Caster("Johnny", "Arcane");
+        Caster lisa = new Caster("Lisa", "Dark");
 
-        // Stored as an int array
-        int xPosition = bob.getPosition()[0];
-        int yPosition = bob.getPosition()[1];
+        Caster skeletor = new Caster("Skeletor", "Necromancy");
 
-        System.out.println(xPosition);
-        System.out.println(yPosition);
-
-        Character megan = new Character(5, 7, 7, 6, 2, 10, "Megan");
+        Dragon smaug = new Dragon();
 
         System.out.println(megan);
 
         System.out.println(Character.rollDice());
+
+        Character[] heroes = {megan, johnny, lisa};
+
+        Flying[] flyers = {smaug, johnny, lisa};
+
+        for(Character c : heroes){
+            c.doDamage(skeletor);
+        }
+
+        for(Flying f : flyers){
+            f.takeOff();
+
+        }
+
+        List<Flying> flyingList = new ArrayList<>();
+
+        Collections.addAll(flyingList, flyers);
+
+        for(int i = 0; i < flyingList.size(); i++){
+            Flying flyer = flyingList.get(i);
+            if(flyer instanceof Character){
+                flyer.fall((Character) flyer);
+            }
+        }
+
+
+
+
+
 
 
     }
